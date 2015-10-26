@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>420</y>
+      <w>280</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IFilter
+--
++ canFilter(IData d) : boolean
++ filter(IData d)
++ process(int low, int high)
+/+ createData(int i): data/
+/+ createIterator(): Iterator/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1036</x>
+      <y>420</y>
+      <w>280</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>PrimeFilter
+--
+- data : List
+--
++ canFilter(IData d) : boolean
++ filter(IData d)
++ process(int low, int high)
++ createData(int i): data
++ createIterator(): Iterator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1036</x>
+      <y>672</y>
+      <w>280</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>PrimeFilterIterator
+--
+- list : List
+- position : int
+--
++ PrimeFilterIterator(List data)
++ hasNext() : boolean
++ next() : Object
++ remove()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>714</y>
+      <w>224</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Iterator
+--
++ hasNext() : boolean
++ next() : E
++ remove()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>238</y>
+      <w>238</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>DataProcessingApp
+--
+_+ main(String[] args)_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>672</y>
+      <w>238</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Iterable
+--
++ iterator() : Iterator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>420</y>
+      <w>420</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>DataGenerator
+--
+- filter : IFilter 
+--
++ DataGenerator(int low, int high, IFilter filter)
++ iterator() : Iterator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>854</x>
+      <y>182</y>
+      <w>238</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IData
+--
++ getId() : int
++ getContent() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1204</x>
+      <y>154</y>
+      <w>294</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>Data
+--
+- id : int
+- content : String
+--
++ getId() : int
++ getContent() : String
++ hashCode() : int
++ equals(Object obj) : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>308</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;60.0;180.0;60.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>308</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>180.0;80.0;180.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>868</x>
+      <y>490</y>
+      <w>196</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1162</x>
+      <y>602</y>
+      <w>42</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>532</y>
+      <w>42</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>756</y>
+      <w>266</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>532</y>
+      <w>364</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>240.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>224</y>
+      <w>84</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1302</x>
+      <y>336</y>
+      <w>140</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;130.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1078</x>
+      <y>224</y>
+      <w>154</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>

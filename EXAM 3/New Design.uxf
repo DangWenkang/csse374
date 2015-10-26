@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>180</y>
+      <w>264</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+AbstractGame
+--
+- JFrame frame
+- JPanel displayPanel
+- JPanel statusPanel
+...
+--
+- void setup(JFrame f)
+# void setupAdditional(JFrame f)
+# void setupDisplay(JPanel p)
+# void setupStatus(JPanel p)
+# int readKeyPress()
+# void handle(int key)
+- boolean gameOver()
++ void run()
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>552</y>
+      <w>252</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>AsteroidGame
+--
+- JPanel controlPanel
+...
+--
++ AsteroidGame()
+# void setupDisplay(JPanel p)
+# void setupStatus(JPanel p)
+- void setupControl(JPanel p)
+# int readKeyPress()
+# void handle(int key)
+# void setupAdditional(JFrame f)
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1008</x>
+      <y>144</y>
+      <w>396</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>frame = new JFrame("Title");
+displayPanel = new JPanel();
+statusPanel = new JPanel();
+ 
+JPanel cPane =(JPanel)frame.getContentPane();
+cPane.add(displayPanel, BorderLayout.CENTER);
+cPane.add(statusPanel, BorderLayout.SOUTH);
+ 
+setupDisplay(displayPanel);
+setupStatus(statusPanel);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>312</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1008</x>
+      <y>396</y>
+      <w>264</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>
+while(!gameOver()) {
+   int key = readKeyPress();
+   handle(key);
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>432</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>744</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>48</x>
+      <y>696</y>
+      <w>408</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>setup(frame);
+frame.setTitle("Amazing Asteroid");
+controlPanel = new JPanel();
+ 
+JPanel cPane = (JPanel)frame.getContentPane();
+cPane.add(controlPanel, BorderLayout.NORTH);
+ 
+setupControl(controlPanel);
+ 
+frame.setVisible(true);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>552</y>
+      <w>252</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>TuxRunner
+--
+...
+--
++ TuxRunner()
+# void setupDisplay(JPanel p)
+# void setupStatus(JPanel p)
+# int readKeyPress()
+# void handle(int key)
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>624</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>240</x>
+      <y>612</y>
+      <w>216</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>setupAdditional(frame);
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1200</x>
+      <y>600</y>
+      <w>324</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>setup(frame);
+frame.setTitle("Awesome Tux Runner");
+frame.setVisible</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1116</x>
+      <y>612</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>288</y>
+      <w>276</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>AracadeGameFramework
+--
+--
++ void run(String type)
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>168</x>
+      <y>84</y>
+      <w>228</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>AbstractGame g;
+if(type.equals("asteroid") {
+  g = new AsteriodGame();
+}
+else if(type.equals("tux")) {
+  g = new TuxRunner();
+}
+g.run();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>240</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>324</y>
+      <w>348</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>480</y>
+      <w>264</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;40.0;10.0;40.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>480</y>
+      <w>252</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;190.0;40.0;190.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>480</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>804</x>
+      <y>552</y>
+      <w>48</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>...</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

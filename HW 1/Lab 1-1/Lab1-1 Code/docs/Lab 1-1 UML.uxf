@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>380</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MicrosoftParser
+--
+StringBuffer parse(String line)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>470</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AmazonParser
+--
+StringBuffer parse(String line)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>290</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>GoogleParser
+--
+StringBuffer parse(String line)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>140</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IParser
+--
+StringBuffer parse(String line)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>270</y>
+      <w>220</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>DataStandardizer
+--
+Map dataFormats
+String company
+String data
+JFrame frame
+JPanel topPanel
+JTextField txtField
+JButton button
+JScrollPane scrollPane
+JTextArea textArea
+JLabel label
+--
+DataStandardizer()
+createAndShowGUI()
+execute()
+parse(String path)
+setUpMap(Map map)
+String getCompany()
+String getData()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>20</y>
+      <w>230</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>DataStandardizerApp
+--
+Map&lt;String, IParser&gt; dataFormats
+--
+main(String[] args)
+setUpMap()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>200</y>
+      <w>90</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0;70.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>200</y>
+      <w>90</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;70.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>200</y>
+      <w>90</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0;70.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>170</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>90</y>
+      <w>240</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>220.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>90</y>
+      <w>30</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

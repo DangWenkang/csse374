@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>280</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>SwingPaintDemo2
+--
++ main(String[] args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>140</y>
+      <w>290</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>JFrame
+--
++ setDefaultCloseOperation(int operation)
++ add(Component comp)
++ setBounds(int x, int y, int width, int height)
++ setVisible(boolean b)
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>400</y>
+      <w>300</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>MyPanel
+--
++ static final int WIDTH
++ static final int HEIGHT
+- ArrayList&lt;AbstractShape&gt; shapes
+- ShapeFactory sf
+- File file
+- FileOutputStream out
+- ShapeFileInputStream in
+- boolean saved
+- int undo
+--
++ MyPanel(ShapeFactory sf)
++ void paint(Graphics g)
++ void checkFile()
++ void addAbstractShape(char c)
++ void saveShapes()
++ void loadSaveFile()
++ void resetShapes()
++ void undo()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>790</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+KeyListener
+--
++ void keyTyped(KeyEvent e)
++ void keyPressed(KeyEvent e)
++ void keyReleased(KeyEvent e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>280</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>JComponent
+--
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>400</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+AbstractShape
+--
+protected String type
+protected int x
+protected int y
+--
++ abstract void paint(Graphics g)
++ String toString()
++ byte[] toBytes()
++ void setX(int x)
++ void setY(int y)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1290</x>
+      <y>440</y>
+      <w>250</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Rectangle
+--
+static final int DEFAULT_WIDTH
+static final int DEFAULT_HEIGHT
+--
++ Rectangle()
++ Rectangle(int width, int height)
++ void paint(Graphics g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1290</x>
+      <y>590</y>
+      <w>250</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Circle
+--
+static final int DEFAULT_DIAMETER
+--
++ Circle()
++ Circle(int width, int height)
++ void paint(Graphics g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1350</x>
+      <y>230</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>FileInputStream
+--
++ void reset()
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>620</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>FileOutputStream
+--
++ void write(byte[] b)
++ void flush()
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1070</x>
+      <y>140</y>
+      <w>300</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ShapeFileInputStream
+--
++ ShapeFileInputStream(File file)
++ ArrayList&lt;AbstractShape&gt; readShapes()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1010</x>
+      <y>20</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>BufferedReader
+--
++ String readLine()
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1250</x>
+      <y>30</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>InputStreamReader
+--
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>400</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ShapeFactory
+--
++ AbstractShape createShape(String type)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>330</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;30.0;180.0;30.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>320</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>190.0;80.0;190.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>420</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>700</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>490</y>
+      <w>170</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;150.0;150.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>490</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>350</y>
+      <w>170</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;150.0;80.0;150.0;80.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1300</x>
+      <y>340</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>490</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>440</y>
+      <w>870</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>850.0;150.0;850.0;300.0;10.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>440</y>
+      <w>1100</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>1080.0;230.0;850.0;320.0;10.0;320.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>520</y>
+      <w>260</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1360</x>
+      <y>170</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>50.0;60.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1030</x>
+      <y>200</y>
+      <w>180</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;200.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1180</x>
+      <y>200</y>
+      <w>130</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>110.0;420.0;10.0;340.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1180</x>
+      <y>470</y>
+      <w>130</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>250</y>
+      <w>180</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>650</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>320</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>80</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;110.0;40.0;110.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>70</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;50.0;10.0;50.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>290</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>JPanel
+--
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>330</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;30.0;10.0;30.0;10.0;70.0</additional_attributes>
+  </element>
+</diagram>

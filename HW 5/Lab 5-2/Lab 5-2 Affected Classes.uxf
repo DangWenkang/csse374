@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>110</y>
+      <w>630</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+AbstractRendererFactory
+--
+private Map&lt;Class&lt;? extends IComponent&gt;, Class&lt;? extends IRenderer&gt;&gt; componentToRenderer
+--
+public IRenderer createRenderer(IComponent c)
+public IRenderer createRendererHelper(Class&lt;? extends IRenderer&gt; clazz, IComponent c)
+public IRenderer createNewInstanceHelper(Constructor&lt;? extends IRenderer&gt; ctor, IComponent c)
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>360</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>OSXRendererFactory
+--
+protected void populate()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>360</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>LinuxRendererFactory
+--
+protected void populate()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>360</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>WindowRendererFactory
+--
+protected void populate()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>240</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>240</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;280.0;70.0;10.0;70.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>240</y>
+      <w>290</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;270.0;70.0;270.0;120.0</additional_attributes>
+  </element>
+</diagram>

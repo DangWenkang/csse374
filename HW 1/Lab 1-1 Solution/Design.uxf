@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>90</x>
+      <y>90</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>DataStandardizerApp
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>90</x>
+      <y>170</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DataStandardizer
+--
+parse(String path)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>180</y>
+      <w>280</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>260;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>500</x>
+      <y>190</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ILineParser
+--
+String parse(String line)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>310</x>
+      <y>320</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>GoogleLineParser
+--
+String parse(String line)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>530</x>
+      <y>320</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MicrosoftLineParser
+--
+String parse(String line)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>770</x>
+      <y>320</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AmazonLineParser
+--
+String parse(String line)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>230</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>380</x>
+      <y>270</y>
+      <w>500</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;50;30;30;480;30;480;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>140</x>
+      <y>90</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>30;80;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>200</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.()</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>70</x>
+      <y>280</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes> Parse the firstline (company)
+ Get the right parser (p)
+ for each (line) in the data file
+   append p.parse(line) to output
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

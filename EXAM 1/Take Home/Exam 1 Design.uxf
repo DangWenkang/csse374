@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>500</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>EchoExtension
+--
+--
+public String toString()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>230</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/AbstractExtension/
+--
+- Map&lt;String, ICommand&gt; commands
+--
+String executeCommand(String args)
+static String toString()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>500</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>StringOpExtension
+--
+--
+public String toString()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>230</y>
+      <w>310</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>CmdFramework
+--
+- Map&lt;String, AbstractExtension&gt; extensions
+--
+void execute()
+private String readLine(BufferedReader in)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>50</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>CmdFrameworkApp
+--
+public static void main(String[] args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>100</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>280</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>960</x>
+      <y>500</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>240</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ICommand
+--
+string execute(String args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1280</x>
+      <y>320</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ConcatCommand
+--
+string execute(String args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1280</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>FindCommand
+--
+string execute(String args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1280</x>
+      <y>190</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>UppercaseCommand
+--
+string execute(String args)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>280</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>320</y>
+      <w>290</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;270.0;100.0;10.0;100.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>320</y>
+      <w>280</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;260.0;100.0;260.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>320</y>
+      <w>30</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>270</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;90.0;120.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>220</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;60.0;60.0;60.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>90</y>
+      <w>140</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;190.0;60.0;190.0;60.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>270</y>
+      <w>140</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;200.0;120.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1290</x>
+      <y>450</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>...</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

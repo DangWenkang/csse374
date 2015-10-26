@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>18</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>414</y>
+      <w>306</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+State
+--
++ move(sensor : int)
++ toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>522</y>
+      <w>306</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>SteadyState
+--
++ move(sensor : int)
++ toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>324</y>
+      <w>306</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>TooNearState
+--
++ move(sensor : int)
++ toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>126</y>
+      <w>306</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>TooFarState
+--
++ move(sensor : int)
++ toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>162</y>
+      <w>486</w>
+      <h>594</h>
+    </coordinates>
+    <panel_attributes>RoombaRobot
+--
+_DELTA : int_
+_HIGH : int_
+_LOW : int_
+- steadyState : State
+- tooNearState : State
+- tooFarState : State
+- state : State
++ sensor : int
++ sensorReadings : ArrayList&lt;Integer&gt;
+--
++ move()
++ readIR()
++ setState(state : State)
++ getState() : state : State
++ getSteadyState() : state : State
++ getTooNearState() : state : State
++ getTooFarState() : state : State
++ toString() : String
+- initReadings()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>468</y>
+      <w>288</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>198</y>
+      <w>252</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;160.0;60.0;160.0;60.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>468</y>
+      <w>252</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;70.0;120.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>378</y>
+      <w>252</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;60.0;60.0;60.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>468</y>
+      <w>252</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;190.0;120.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1260</x>
+      <y>774</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>...</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

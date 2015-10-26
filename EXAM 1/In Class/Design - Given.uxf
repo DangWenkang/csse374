@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>70</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ArraySorter
+--
++ static void sort(int a[], String type)
++ static void bubbleSort(int a[])
++ static void mergeSort(int a[])
++ static void quickSort(int a[])
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>70</y>
+      <w>260</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Client
+--
+--
++ static void main(String args[])
++ static void read(int a[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>70</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>100</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.()</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>80</x>
+      <y>190</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>int size = ... // User's input
+String sortType = ... // User's input
+
+int a[] = new int[size];
+read(a); // User's input
+ArraySorter.sort(a, sortType);
+
+ // print a
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>100</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.()</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>380</x>
+      <y>190</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>if(type.equals("bubble"))
+  bubbleSort(a);
+else if(type.equals("merge"))
+  mergeSort(a);
+else if(type.equals("quick"))
+  quickSort(a);
+else
+  throw new UnsuportedException();
+  // May support more algorithms later
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

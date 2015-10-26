@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>100</y>
+      <w>240</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>AnimationPanel
+--
+_- serialVersionUID : final long_
+- sprites : List&lt;ISprite&gt;
+- animating : volatile boolean
+- sleepTime : long
+--
++ AnimationPanel(long sleepTime)
++ add(ISprite s)
++ getSize() : Dimension
++ animate()
++ reset()
+# paintComponent(Graphics g)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1090</x>
+      <y>120</y>
+      <w>450</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>/AbstractSprite/
+--
+# dx : double
+# dy : double
+# shape : Shape
+--
++ AbstractSprite(double x, double y, double width, double height)
+# computeNewBoundsAfterMoving(Dimension space) : Rectangle2D
++ getShape() : Shape
+/+ move(Dimension space)/
+/+ createIterator() : Iterator/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>600</y>
+      <w>450</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RectangleSprite
+--
+--
++ RectangleSprite(double x, double y, double width, double height)
++ move(Dimension space)
++ createIterator() : Iterator&lt;AbstractSprite&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>710</y>
+      <w>450</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CircleSprite
+--
+--
++ RectangleSprite(double x, double y, double width, double height)
++ move(Dimension space)
++ createIterator() : Iterator&lt;AbstractSprite&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>640</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>NullIterator
+--
+--
++ next() : Object
++ hasNext() : boolean
++ remove()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>370</y>
+      <w>260</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>CompositeIterator
+--
++ stack : Stack
+--
++ CompositeIterator(Iterator iterator)
++ next() : Object
++ hasNext() : boolean
++ remove()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>350</y>
+      <w>450</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>SnowmanSprite
+--
++ shapes : List&lt;AbstractSprite&gt;
+--
++ RectangleSprite(double x, double y, double width, double height)
++ move(Dimension space)
++ createIterator() : Iterator&lt;AbstractSprite&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>480</y>
+      <w>450</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>WindowSprite
+--
++ shapes : List&lt;AbstractSprite&gt;
+--
++ RectangleSprite(double x, double y, double width, double height)
++ move(Dimension space)
++ createIterator() : Iterator&lt;AbstractSprite&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>480</y>
+      <w>370</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>SpriteFactory
+--
+_+ DX : final double_
+_+ DY : final double_
+_+ WIDTH : final double_
+_+ HEIGHT : final double_
+_- random : Random_
+_- sprites : List&lt;Class&lt;? extends ISprite&gt;&gt;_
+--
+_+ computeRandomLocation(Dimension space) : Point2D_
+_+ createRandomSprite(Dimension space) : ISprite_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>100</y>
+      <w>310</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>MainWindow
+--
+- frame : JFrame
+- actionPanel : JPanel
+- animationPanel : AnimationPanel
+- moveButton : JButton
+- createButton : JButton
+- resetButton : JButton
+--
++ MainWindow(String name, long sleepTime)
+- createWidgets(String name, long sleepTime)
+- assignActions()
++ show()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>200</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>150</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ISprite
+--
+--
++ move(Dimension space)
++ getShape() : Shape
++ createIterator() : Iterator&lt;ISprite&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>300</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>210</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>190</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>280</y>
+      <w>70</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;50.0;480.0;10.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>280</y>
+      <w>70</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;50.0;370.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>280</y>
+      <w>70</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;50.0;250.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>280</y>
+      <w>70</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;50.0;120.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>480</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>400</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>700</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>640</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>550</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;100.0;80.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>440</y>
+      <w>140</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;340.0;120.0;340.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>430</y>
+      <w>440</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>420.0;10.0;330.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>540</y>
+      <w>440</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>420.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>600</y>
+      <w>440</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>420.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>620</y>
+      <w>440</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>420.0;130.0;70.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>250</y>
+      <w>460</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>440.0;10.0;290.0;320.0;10.0;320.0</additional_attributes>
+  </element>
+</diagram>

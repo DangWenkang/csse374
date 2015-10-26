@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>110</y>
+      <w>260</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Client
+--
+--
++ static void main(String args[])
++ static void read(int a[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>140</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>150</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.()</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>90</x>
+      <y>250</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>int size = ... // User's input
+String sortType = ... // User's input
+
+int a[] = new int[size];
+read(a); // User's input
+ArraySorter.sort(a, sortType);
+
+ // print a
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>120</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ISorter
+--
++ void sort(int a[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>30</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>BubbleSorter
+--
++ void sort(int a[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>210</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>MergeSorter
+--
++ void sort(int a[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>120</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>QuickSorter
+--
++ void sort(int a[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>50</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;80.0;110.0;80.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>150</y>
+      <w>170</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;100.0;150.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>150</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>110</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ArraySorter
+--
+private Map&lt;String,ISorter&gt; sorters
+--
++ static void sort(int a[], String type)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>530</x>
+      <y>250</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>-pass the string to the map to return the corresponding ISorter
+  
+- if no ISupporter is returned, throw new UnsuportedException();
+  
+ // May support more algorithms later
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>160</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.()</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>150</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1260</x>
+      <y>330</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>other sorter with a different algorithm...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1110</x>
+      <y>150</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;200.0;150.0;200.0</additional_attributes>
+  </element>
+</diagram>
